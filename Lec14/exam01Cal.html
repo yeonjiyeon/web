@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>vue 계산기</title>
+    <meta charset="UTF-8">
+    <style>
+      #app {border:1px dotted blueviolet; background-color:rgb(185, 199, 212);}
+      p, input {font:15px; color: blueviolet; text-align: center;}
+    </style>
+  <body>
+    <div id="app">
+      <p>x <input v-model="x"></p>
+      <p>y <input v-model="y"></p>
+      <p>------------------------</p>
+      <p>= <span v-text="result"></span></p>
+     </div>
+     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+     <script>
+     new Vue ({
+         el : '#app',
+         data :{x:0, y:0, r:0 },
+         computed:{result:function(){
+             let x = parseInt(this.x);
+             //if(isNotNumberValue(x))
+             //return this.r;
+             let y =parseInt( this.y);
+             //if(isNotNumberValue(y))
+             //return this.r;
+             this.r = x + y;
+             return this.r;
+         }}
+     });
+     </script>
+  </body>
+</html>

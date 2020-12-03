@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+    <example v-bind:value="value"></example>    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        function Cat(name){
+            this.name = name;
+        }
+
+        Vue.component('example',{
+            props:{
+                value: Cat
+            }
+        });
+
+        new Vue({
+            el:'#app',
+            data: {
+                value: new Cat('구름') // value는 고양이 데이터
+            }
+        });
+    </script>
+</body>
+</html>

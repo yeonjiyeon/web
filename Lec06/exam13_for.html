@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        
+    </head>
+    <body>
+        <script>
+        var n=prompt("단수를 입력하세요", "2");
+        dan = parseInt(n);
+        if(isNaN(dan) || dan<1 || dan>9){
+            alert("잘못입력하셨습니다");
+        }
+
+        for(var i=1; i<10; i++){
+            document.write(dan+"X"+i+"="+dan*i+"<br>");
+        }    
+         </script>
+        
+    </body>
+</html>

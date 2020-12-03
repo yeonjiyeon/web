@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        
+    </head>
+    <body>     
+        <div id="result"></div>   
+        <script>
+            var result = document.getElementById("result");
+            function promptEx(){
+                var ret=prompt("이름을 입력하세요","아무개");
+                if(ret==null){
+                    result.innerHTML ="<strong>취소나 그냥 닫았군요</strong>";
+                }
+                else{
+                    result.innerHTML ="<h2>" +ret+"</h2>";
+                }
+            }
+
+            function confirmEx(){
+                var ret=confirm("전송할까요?");
+                if(ret==true){//확인을 누르면
+                    result.innerHTML ="<strong>확인을 눌렀군요</strong>";
+                }
+                else{
+                    result.innerHTML ="<h2>취소나 그냥 닫았군요</h2>";
+                }
+            }
+        </script>        
+        <button onclick="promptEx()">프롬프트 다이얼로그</button>
+        <button onclick="confirmEx()">확인 다이얼로그</button>
+        <button onclick="javascript:alert('클릭하였습니다.')">경고 다이얼로그</button>
+    </body>
+</html>

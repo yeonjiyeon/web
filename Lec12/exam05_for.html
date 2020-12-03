@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="n in countdown">{{n}}</li>
+            <li>launch missile</li>
+        </ul>
+        <!-- <button @click="">Click me</button> 축약이 가능함-->
+        <button v-on:click="toast">Click me</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data: {countdown:[]},
+            methods:{ toast(){alert('Tosted')}},
+            updated : function(){console.log("update")}
+        });
+        var counter = 10;
+        setInterval (function(){//시간 간격을 주는 것 
+            if(counter > 1){
+                vm.countdown.push(
+                counter=counter-1
+                )}
+        },1000);  //1000-> 1초
+    </script>
+</body>
+</html>

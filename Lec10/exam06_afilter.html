@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            const arr1 = [
+                {name:'프로도',age:3},
+                {name:'라이언',age:5},
+                {name:'콘',age:2},
+                {name:'무지',age:6},
+                {name:'피치',age:12},
+                {name:'펭수',age:10},
+                {name:'네온',age:7}
+                ]
+                const found = arr1.find(ele=> ele.age >=10 ); 
+                //매개변수 이름은 자유로게 지어도 된다
+                console.log(found);//첫번째 변수만 찾아준다
+                const filter = arr1.filter(ele=> ele.age >=10 ); 
+                console.log(filter);//모든 변수를 찾아준다
+                const filter2 = arr1.filter(ele=> ele.name !='무지' );
+                console.log(filter2);
+                bool_some = arr1.some(ele => ele.name == '펭수');
+                console.log(bool_some);
+                bool_every = arr1.every(ele => ele.age == 4);
+                console.log(bool_every);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

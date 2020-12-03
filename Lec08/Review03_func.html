@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>함수연습</title>
+        <link rel="stylesheet" href="c03.css">
+    </head>
+    <body>
+        <h1>TravelWorthy</h1>
+        <div id="message" onclick="updateMessage()">welcome to our site!!!!</div>
+        <script>
+            var message = "Sign up to receive our newsletter for 10% off!";
+            function updateMessage(){
+                var mydiv = document.getElementById('message'); 
+                mydiv.textContent = message;
+            }
+
+            //1. 기본형: document.getElementById("message").onclick = updateMessage;
+            /*2. var yourDiv = document.getElementById("message").onclick
+            yourDiv.onclick = updateMessage;
+            yourDiv.onclick = function(){
+
+            }*/
+        </script>
+    </body>
+</html>

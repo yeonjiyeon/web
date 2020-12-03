@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>35_selector_03.html</title>
+<style>
+	#first #ff .bb {
+		color:red;
+	}
+	
+	#first #ff > .bb {  /*바로 밑에 있는 태그만 적용*/
+		font-size:30px;
+	}
+	
+	#first #gg .bb {
+		color:pink;
+	}
+	
+	#second .bb {
+		color:blue;
+	}
+</style>
+</head>
+<body>
+	<div id="first">		<!-- 1대 -->
+		<div id="ff">		<!-- 2대 -->
+			<span class="bb">hi</span>		<!-- 3대 -->
+			<div id="hh">					<!-- 3대 -->
+				<span class="bb">밑에 있는 클래스</span> <!-- 4대 -->
+			</div>
+		</div>
+		<div id="gg">		<!-- 2대 -->
+			<span class="bb">hoho</span>	<!-- 3대 -->
+		</div>
+	</div>
+	
+	<div id="second">
+		<span class="bb">hahaha</span>
+	</div>
+</body>
+</html>

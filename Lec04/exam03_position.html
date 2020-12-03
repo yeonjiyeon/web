@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title> 
+        <style>
+            div {
+                display: inline-block; height: 50px; 
+                width: 50px; 
+                border: 1px solid lightgray; 
+                text-align: center;
+                color: white;
+                background-color: red;
+                vertical-align:middle/*태이블형식(table-cell)일 때만 적용가능*/ ;                
+            }
+
+           /* div {
+                display: table-cell/*inline-block; height: 50px; 
+                width: 50px; 
+                border: 1px solid lightgray; 
+                text-align: center;
+                color: white;
+                background-color: red;
+                vertical-align:middle/*태이블형식(table-cell)일 때만 적용가능 ;                
+            }*/
+            #down:hover {position: relative; left: 20px; top: 20px; background-color: green;}
+            #up:hover {position: relative; right: 20px; bottom: 20px; background-color: green;}
+        </style>
+    </head>
+    <body>
+        <h3>상대 배치, relative</h3>
+        <hr>
+        <div>T</div>
+        <div id="down">H</div>
+        <div>A</div>
+        <div id="up">N</div>
+        <div>K</div>
+        <div>S</div>
+    </body>
+</html>

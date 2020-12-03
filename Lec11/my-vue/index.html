@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <div id="app"> <!-- 뷰가 데이터 바인딩을 해준다 -->
+        {{ message }}
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script>
+        new Vue({ //뷰객체 로드, 뷰 인스턴스(뷰 생성), 실행 순서 존재 {키:값}형태 
+          el: "#app",
+          data: {
+          message: "Hello Vue.js!"//값을 전달할 때 사용 message 변수의 역할
+          }
+        });
+      </script>
+  
+    
+</body>
+</html>

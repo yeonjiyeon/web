@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="app">
+    <child-component v-bind:propsdata='mymessage'></child-component>
+    <sibling-component v-bind:propsdata='anotherMessage'></sibling-component>
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   <script>
+       Vue.component('child-component',{
+           props: ['propsdata'],
+           template: ' <p>{{ propsdata }}</p>'
+       });
+       
+       //sibling-component
+       Vue.component('sibling-component',{
+           props: ['propsdata'],
+           template: ' <p><i>{{ propsdata }}</i></p>'
+       });
+       var app = new Vue({
+           el: '#app',
+           data: {
+               mymessage:'첫번째 자식 부모 컨퍼넌트로 메시지 전달 받음',
+                //anotherMessage
+                anotherMessage:'두번째 자식 부모 컨퍼넌트로 메시지 전달 받음'
+        }
+       });
+
+     
+   </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>31_animation.html</title>
+<style>
+	#aa {
+		animation-name:aa_move; /*동작할 애니메이션의 이름*/
+		animation-duration:30s;  /* 동작시간*/
+	}
+	
+	#bb {
+		animation-name:bb_move; /*동작할 애니메이션의 이름*/
+		animation-duration:3s;  /* 동작시간*/
+	}
+	
+	#cc {
+		animation-name:cc_move; /*동작할 애니메이션의 이름*/
+		animation-duration:3s;  /* 동작시간*/
+	}
+	
+	
+	@keyframes aa_move {/*움직임을 정의하는 부분*/
+		from {transform:rotate(0deg)}     /*시작 각도*/
+		to {transform:rotate(360deg)}  /*최종 각도*/
+	}
+	
+	@keyframes bb_move {/*움직임을 정의하는 부분*/
+		from {transform:scale(1,1)}     /*시작 각도*/
+		to {transform:scale(2,2)}  /*최종 각도*/
+	}
+	
+	@keyframes cc_move {/*움직임을 정의하는 부분*/
+		from {transform:translate(10px,10px)}     /*시작 각도*/
+		to {transform:translate(100px,100px)}  /*최종 각도*/
+	}
+	
+	
+</style>
+</head>
+<body>
+	<img id="aa" src="cat01.jpg" width="100" height="100">
+	<img id="bb" src="cat01.jpg" width="100" height="100">
+	<img id="cc" src="cat01.jpg" width="100" height="100">
+</body>
+</html>

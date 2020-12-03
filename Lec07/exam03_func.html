@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title></title></head>
+<body>
+<script>
+    var first = 100, second =200;
+    sum = first + second;
+    console.log("global sum = " + sum);
+
+    
+    function sumfunc (first, second){
+        return first + second;
+    }
+    console.log("sumfunc(100,300) ="+sumfunc(100,300));
+    sum = sum +100;
+    sumfunc(200,300)*400;
+    console.log("sum = sum+100="+sum);
+    console.log("sumfunc(200,300)*400 ="+sumfunc(200,300)*400);
+    consoleR = console.log("연습이요");
+    console.log("consoleR="+consoleR);
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+/* n값은 0부터 시작하는것으로 하면 됨 */
+	/* li태그의 순서는 1부터 계산함 */
+	li:first-child {/*li 태그중에 첫번째 li태그*/
+		color:red;
+	}
+	
+	li:last-child {
+		color:blue;
+	}
+	
+	li:nth-child(4) {
+		color:green;
+	}
+	
+	li:nth-child(2n) {  /*n:전체  2n:짝수번째*/
+		text-decoration:underline;
+	}
+	
+	li:nth-child(2n+1) {
+		font-size:30px;
+	}
+</style>
+</head>
+<body>
+	<ul>
+		<li>짜장면</li>
+		<li>우동</li>
+		<li>탕수육</li>
+		<li>팔보채</li>
+		<li>양장피</li>
+		<li>전가복</li>
+		<li>라조기</li>
+		<li>깐풍기</li>
+		<li>짬뽕</li>
+	</ul>
+</body>
+</html>

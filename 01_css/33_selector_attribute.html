@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>33_selector_attribute.html</title>
+  <style>
+  	input[type=text] {
+  		background:red;
+  	}
+  	
+  	input[type=password] {
+  		background:blue;
+  	}
+  	
+  	input[type=button] {
+  		border:1px solid black;
+  		background:darkblue;
+  		color:white
+  	}
+  	
+	input[type=reset] {
+		border:1px solid black;
+		background:red;
+		color:white;
+	}
+	
+	input[value=hohoho] {
+		background:yellow;
+	}
+	
+	span[id=aa] {
+		background:pink;
+	}
+  </style> 
+</head>
+<body>
+	<div>
+		<span id="aa">hahaha</span><p>
+		<span>hohoho</span><p>
+	</div>
+	<form>
+		<input type="text"> <p>
+		<input type="password"><p>
+		<input type="button" value="클릭"><p>
+		<input type="reset" value="취소"><p>
+		<input type="text" value="hohoho">
+	</form>
+</body>
+</html>

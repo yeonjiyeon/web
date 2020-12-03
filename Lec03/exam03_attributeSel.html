@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            input[type] {font-size: 28ot; color: blue;}
+            input[type="text"] {background-color: yellow;}
+            input[type="password"] {background-color: cyan;}
+            
+        </style>
+        <style>
+            a {font-size: 20px; font-weight: bold;} 
+            a[title="daum"] {color:red;}
+            a[title ~="club"] {color:black;}/*접미사*/
+            a[title |="google"] {color: green;}
+            a[title ^="face"] {color:magenta;}/*접두사*/
+            a[title $="korea"] {color:yellow}/*접미사*/
+            a[title *="utu"] {color: brown;}
+        </style>
+      <form>
+          아이디: <input type="text"><br><br>
+          비밀번호: <input type="password"><br><br>
+      </form>
+      <hr>
+      <a title="facenaver club" href="http://naver.com">네이버</a><br><br>
+      <a title="google club" href="https://www.google.com/">google</a><br><br>
+      <a title="w3schools club" href="https://www.w3schools.com/">w3schools</a><br><br>
+      <a title="zdnet korea" href="https://zdnet.co.kr/">zdnet</a><br><br>
+      <a title="cnet korea" href="https://www.cnet.co.kr/">cnet korea</a><br><br>
+      <a title="daum" href="http://daum.net">daum</a><br><br>
+      <a title="youtube" href="http://youtube.com">youtube</a>
+    </body>
+</html>

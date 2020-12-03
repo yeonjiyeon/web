@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document Object Model</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="c05.css">
+    </head>
+    <body>
+        <div id="page">
+            <h1 id="header">List King</h1>
+            <h2 onclick="removeItem()">Buy groceries</h2>
+            <ul id="todo">
+                <li id="one" class="hot"><em>fresh</em>figs</li>
+                <li id="two" class="hot">pine nuts</li>
+                <li id="three" class="hot">honey</li>
+                <li id="four">balsamic vineger</li>
+                
+            </ul>
+        </div>
+        <script>
+            var list = document.getElementsByTagName('ul')[0];
+            var newItemLast = document.createElement('li');
+            var newTextLast = document.createTextNode('cream');
+            newItemLast.appendChild (newTextLast);
+            list.appendChild(newItemLast); 
+        
+            var newItemFirst = document.createElement('li');
+            var newTextFirst = document.createTextNode('kale');
+            newItemFirst.appendChild(newTextFirst);
+            list.insertBefore(newItemFirst, list.firstChild);
+            liList= document.querySelectorAll('li');
+            liList.forEach( x => x.className ='cool'  );
+            var heading = document.querySelector('h2');
+            var headingText = heading.firstChild.nodeValue;
+            var totalTtems = liList.length;
+            var newHeading = headingText +"<span>"+ totalTtems+'</span>';
+            heading.innerHTML = newHeading;
+            </script> 
+    </body>
+</html>

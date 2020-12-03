@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	input:disabled {
+		background:black;
+	}
+	input:enabled {
+		background:yellow;
+	}
+	
+	input:focus { /*focus상태에서 빨간색이 적용된다 입력할때!!! */
+		color:red;
+	}
+			
+	#aa {
+		display:inline-block;
+		width:100px;
+		height:100px;
+		border:1px solid red;
+		border-radius:50px;
+
+	}
+</style>
+
+<script type="text/javascript">
+	function aa(my){
+		my.style.color="red";
+	}
+	
+	function bb(my){
+		my.style.color="black";
+	}
+</script>
+</head>
+
+
+<body>
+	<form>
+		<span id=aa></span> <p>
+		<input type=text onfocus=aa(this) onblur=bb(this)> <p>
+		<input type=text disabled> <p>
+		<input type=password><p>
+		<input type=radio disabled><p>
+		<input type=checkbox><p>
+		<input type=button value=확인 disabled><p>
+		<input type=submit value=전송><p>
+		<input type=reset value=취소><p>
+				
+	</form>
+
+</body>
+</html>

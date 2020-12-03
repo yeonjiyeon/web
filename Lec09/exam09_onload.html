@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    <script>
+        function changeImage(){
+            var sel = document.getElementById("sel");
+            var img = document.getElementById("myimg");
+            var span = document.getElementById("myspan");
+            var index = sel.selectedIndex;
+            img.src = sel.options[index].value;
+            myspan.innerHTML = img.width + "x" + img.height;
+        }
+    </script>
+    </head>
+    <body>
+        <h3>이미지 크기 출력</h3>
+        <form>
+            <select id="sel" onchange="changeImage()">
+                <option value="media/apple.png">사과</option>
+                <option value="media/banana.png">바나나</option>
+                <option value="media/mango.png">망고</option>
+            </select>
+            <span id="myspan">이미지 크기</span>
+        </form>
+        <p><img id="myimg" src="media/apple.png" alt=""></p>
+    </body>
+</html>

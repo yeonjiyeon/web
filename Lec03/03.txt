@@ -1,0 +1,23 @@
+http://www.blackgoosebistro.com/pizza.php
+셀렉터 : element , 여러개일 수도 있음
+속성 property=attribute
+
+.  :  class 셀렉터
+ 
+#  	 :  id 셀렉터
+
+*	 :  전체 셀렉터 	예) * { color : green; }
+
+속성 셀렉터 :  	예) input[type=text] { color : red; } 
+
+>	 : 자식 셀렉터(child selector)
+
+공백: 자손 관계인 2 개 이상의 태그 나열,자손 셀렉터예) ul strong { color : dodgerblue; }
+가상 클래스(pseudo-class) 셀렉터 예1) a:visited { color : green; }
+
+em: 현재 폰트의 몇배로 할 것인지(상대적)
+pt,px: 절대적 
+
+스타일 합치기(cascading)와 오버라이딩(overriding)이란?
+태그에 적용되는 모든 스타일이 합쳐지고, 동일한 스타일은 순위가 높은 스타일이 우선 적용되는 규칙
+더 최신의 스타일이 우선 적용된다

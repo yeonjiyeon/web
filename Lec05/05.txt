@@ -1,0 +1,8 @@
+templete
+#0D0D0D
+#5A5A5A
+<CSS 결합자>
+인접 형제(Adjacent sibling) 결합자 (A + B)
+일반 형제(General sibling) 결합자 (A ~ B):A 의 다음 형제 요소를 만족하면서 B 를 만족하는 요소
+
+

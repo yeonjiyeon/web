@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="c03.css">
+    </head>
+    <body>
+        <h1>TravelWorthy</h1>
+        <div id="info"></div>
+        <script>
+            // 문자열 처리 **************중요
+            var saying ="HOME SWEET HOME ";
+            var msg = "<h2>length</h2><p>"+saying.length+"</p>"/*property*/
+            var ttt = saying.toUpperCase();
+            msg += "<h2>uppercase</h2><p>"+saying.toUpperCase()+"</p>"/*function*/
+            msg += "<h2>LowerCase</h2><p>"+saying.toLowerCase+"</p>"
+            msg += "<h2>character index:12</h2><p>"+saying.charAt(12)+"</p>"
+            msg += "<h2>first ee</h2><p>"+saying.indexOf('EE')+"</p>"
+            msg += "<h2>last e</h2><p>"+saying.lastIndexOf("E")+"</p>"
+            msg += "<h2>substring 8-14 </h2><p>"+saying.substring(8,14)+"</p>"
+            msg += "<h2>substr 8-4 </h2><p>"+saying.substr(8,4)+"</p>"
+            msg += "<h2>replace</h2><p>"+saying.replace("ME","w")+"</p>"
+            msg += "<h2>slice</h2><p>"+saying.slice(0,14)+"</p>"
+            msg += "<h2>split</h2><p>"+saying.split(' ')+"</p>"
+            var myinfo = document.getElementById('info');
+            myinfo.innerHTML = msg;
+            //saying.toUpperCase().toUpperCase.trim()
+            //"Lunch".length.toExponential.
+       </script>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>15_text_align.html</title>
+<style>
+	#pkc {
+		width:100px;
+		height:30px;
+		border:1px solid red;
+		display:table-cell;
+		text-align:center;
+		vertical-align:middle;
+	}
+	#menu1 {
+	  width:310;
+	  height:32px;
+	  display:flex;
+	  }
+	#sub1 {
+	  width:100px;
+	  height:30px;
+	  border:1px solid blue;
+	}
+	
+	#menu2 {
+	  width:310;
+	  height:32px;
+	  }
+	#sub2 {
+	  width:100px;
+	  height:30px;
+	  border:1px solid blue;
+	  display:inline;/* inline, block, inline-block */
+	}
+	
+	#menu3 {
+	  width:310;
+	  height:32px;
+	  }
+	#sub3 {
+	  width:100px;
+	  height:30px;
+	  border:1px solid blue;
+	  float:left;
+	}
+	
+	
+</style>
+</head>
+<body>
+	<div id=pkc>전자제품</div>
+	<hr>
+	
+	<!--테이블 태그 align, valign  -->
+	<table width=300 height=30 border=1 cellspacing=0>
+		<tr align=center>
+			<td align=middle>전자제품</td>
+			<td align=middle>건강제품</td>
+			<td align=middle>안주관련</td>
+		</tr>
+	</table>
+	<hr>
+	
+	
+	<!--일반 태그에 스타일을 적용해서 외곽선  -->
+	
+	<!-- 현재는 display: flex로 하기 -->
+	<div id=menu1>
+	<div id=sub1>전자제품</div>
+	<div id=sub1>건강제품</div>
+	<div id=sub1>안주관련</div>
+	</div>
+	<hr>
+	
+	<!-- display:inline-block로 하기  -->
+	<div id=menu2>
+	<div id=sub2>전자제품</div>
+	<div id=sub2>건강제품</div>
+	<div id=sub2>안주관련</div>
+	</div>
+	<hr>
+	
+	<!-- float로 하기-->
+	<div id=menu3>
+	<div id=sub3>전자제품</div>
+	<div id=sub3>건강제품</div>
+	<div id=sub3>안주관련</div>
+	</div>
+	<hr>
+	
+</body>
+</html>

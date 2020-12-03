@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>넓이: {{area}}</p> <!-- 함수도 수로 봄으로 데이터 값을 넣을 수 있다 -->
+        <p>
+            <button v-on:click="length +=1">세로추가</button>
+            <button v-on:click="length +=1">가로추가</button>
+        </p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data : {length:5, width:3},
+            computed:{area: function(){ return this.width*this.length  //function  생략 가능하다
+            //width = 10; -> 변수에 새로운 값을 대입하고 싶다면 this를 꼭 써주어야 한다
+            }},
+            watch: {
+                length: function(newVal, oldVal){//앞부분이 새로운 값 , 뒷 부분이 예전값으로 설정되어 있음
+                    console.log('이전 세로 길이:' + oldVal + '\n 새 세로 길이:' +newVal);
+                },
+                width: function(newVal, oldVal){
+                    console.log('이전 가로 길이:' + oldVal + '\n  새 가로 길이:' +newVal);
+                },
+                area: function(newVal, oldVal) {
+                    console.log('이전 넓이: ' + oldVal + '\n새 넓이: ' + newVal);
+                 }
+            },
+            beforeUpdate: function(){// dom의 라이프 싸이클!
+                console.log('데이터변경은 결과값 변경이전에 이루어졌습니다');
+            }
+        });
+    </script>
+</body>
+</html>

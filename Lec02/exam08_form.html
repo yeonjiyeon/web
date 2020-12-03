@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head><title></title></head>
+    <body>
+        <form action="http://search.naver.com/search.naver" method="post">
+            사용자 ID: <input type="text" name="id" size="15" value=""><br>
+            password: <input type="password" name="pw" size="15" value=""><br>
+             <input type="submit" value="완료"><br>
+        </form>
+        <br>
+        <form>
+            나라:<input type="text" name="country" list="countries"><br>
+                 <datalist id="countries">  
+                     <option value="가나"></option>
+                     <option value="스위스"></option>
+                     <option value="브라질"></option>
+                 </datalist>
+                 
+            보고 싶은 것<input type="text" list="what"><br>
+            <datalist id="what">
+             <option value="산">
+             <option value="바다">
+             <option value="도시">
+            </datalist>
+         </form>
+         <br>
+         <form>
+            짜장면<input type="checkbox" value="1">
+            짬뽕<input type="checkbox" value="2" checked>
+            탕수육<input type="checkbox" value="3">
+         </form>
+         <br>
+         <form>
+           <input type="radio" name="china" value="1">
+            짜장면<img src="media/jajang.png"><br>
+            <input type="radio" name="china" value="2">
+            짬뽕<img src="media/jjambbong.png"><br>
+            <input type="radio" name="china" value="3">
+            탕수육<img src="media/tangsuyuk.png">
+         </form>
+         <br>
+         <form>
+             <select name="china">
+                 <option value="1">짜장면</option>
+                 <option value="2">짬뽕</option>
+                 <option value="3">탕수육</option>
+             </select>
+         </form>
+    </body>
+</html>

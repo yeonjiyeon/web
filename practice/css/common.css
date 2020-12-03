@@ -1,0 +1,60 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family:"맑은 고딕", "돋움";
+    font-size:12px;
+    color:#444444;
+    background-color:#f2f0f0;
+}
+
+ul {
+    list-style-type:none;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration:none;
+    color:#444444;
+}
+
+.clear {
+    clear:both;
+}
+
+/* ---------- 헤더 ------------- */
+header {
+    height:128px;
+}
+
+header #top {
+    width:990px;
+    margin:0 auto;
+/* border:solid 1px #0000ff; */
+}
+
+header #logo {
+    float:left;
+    margin:30px 0 0 0;
+/* border:solid 1px #000000; */
+}
+
+/* 검색 */
+header #search {
+    float:left;
+    font-family:"Sans-serif";
+    font-size:12px;
+    color:#96c11f;
+    margin:40px 0 0 150px;
+/* border:solid 1px #000000; */
+}
+
+header #search #search_title {
+    float:left;
+    margin-top:6px;
+}
+
+header #search #search_form {
+    float:left;
+}

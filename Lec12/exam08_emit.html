@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <child-component v-on:show-log="printText">show</child-component>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        Vue.component('child-component',{
+            template: "<button @click='showlog'>show</button>",
+            methods:{showlog: function(){this.$emit('show-log')}}
+            // emit:이벤트 발생은 컴포넌트의 통신 방법 중 하위 컴포넌트에서 상위 컴포넌트로 통신하는 방식
+        });
+        new Vue({
+            el:'#app',
+            data:{message:'부모로부터 메시지가 왔어요'},
+            methods : {printText: function(){
+                console.log('이벤트 하나를 받았다');
+            }}
+        });
+    </script>
+</body>
+</html>

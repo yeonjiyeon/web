@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>셀렉터 만들기</title>
+        <style>
+           h3,li {color: brown;} 
+           div > div> strong {background-color: yellowgreen;}
+           ul span { color:dodgerblue;}
+           .warning {color: red;}
+           body.main { background-color: #fff;}
+           div.main{background-color: yellow;}
+           #list {background-color: mistyrose;}
+           h3:first-letter {color: red;}
+           li:hover {background-color: yellowgreen;}
+        </style>
+    </head>
+    <body class="main">
+        <h3>Web Programming</h3>
+        <hr>
+        <div>
+            <div>2학기<strong>학습내용</strong>입니다.</div>
+            <ul id="list">
+                <li><span>HTML</span></li>
+                <li><strong>CSS</strong></li>
+                <li><span>Javascript</span></li>
+                <li>vue.js</li>
+            </ul>
+            <div class="warning">60점 이하는 F요</div>
+            <div class="main">메인 연습이요</div>
+        </div>
+
+    </body>
+</html>

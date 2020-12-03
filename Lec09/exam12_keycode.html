@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            function whatKeydown(e){
+                var str = "";
+                var div = document.getElementById("div");
+                str +="e.key" +e.key+"<br>";
+                str +="e.code" +e.code+"<br>";
+                div.innerHTML = str;
+            }
+        </script>
+    </head>
+    <body>
+        <h3>키리스너와 키 이벤트 객체의 프로퍼티</h3>
+        택스트창에 키를 눌러 보세요<br>
+        <input type="text" id="text" onkeydown="whatKeydown(event)">
+        <div id="div" style="background-color: skyblue; width: 250px;
+        height: 50px;" ></div>
+        
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        
+    </head>
+    <body onload="init()">
+        <h3>HTML 태그에 리스너 작성</h3>
+        <hr/>
+        <p onmouseover="this.style.backgroundColor='orchid'"
+        onmouseout="this.style.backgroundColor='white'">마우스를 올리면 분꽃색으로 변해요</p>
+        
+        <h3>함수 등록</h3>
+        <hr/>
+        <script>
+            var p;
+            function over() {
+                p= document.getElementById("second");
+                p.style.backgroundColor ="olivedrab"
+            }
+
+            function out() {
+                p= document.getElementById("second");
+                p.style.backgroundColor ="white"
+            }
+        </script>
+        <p id="second" onmouseover="over()" onmouseout="out()">
+            마우스를 올리면 올리브색으로 변해요</p>
+        <!--img src="media/apple.png">그냥그냥</img-->
+
+        <h3>DOM객체의 이벤트 리스너 프로퍼티에 함수 등록</h3>
+        <hr/>
+        <script>
+            var p1;
+            function init(){
+                p1= document.getElementById("three");
+                //p1.onmouseover = over; //가로 사용x  p는 객체 
+                //p1.onmouseout = out; //
+                //이벤트 리스너 등록
+                p1.addEventListener("mouseover", over); //default false
+                p1.addEventListener("mouseout", out); //addEventListener
+                //p1.addEventListener("onmouseout",out.toString);//addEventListener에서는 2번째 파라미터의 내장함수?이용이 가능하다
+
+                function over() {
+                p1.style.backgroundColor ="blue"
+            }
+
+            function out() {   
+                p1.style.backgroundColor ="white"
+            }
+            }//init
+        </script>
+        <p id="three">
+            마우스를 올리면 파란색으로 변해요</p>
+        <!--img src="media/apple.png">그냥그냥</img-->
+    </body>
+</html>

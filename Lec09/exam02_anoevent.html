@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            function init(){
+                p = document.getElementById('p');
+                p.onmouseover = function(){
+                    this.style.background="olivedrab";
+                };
+                p.onmouseout = function(){
+                    this.style.background="white";
+                };
+            }
+        </script>
+    </head>
+    <body onload="init()">
+        <h3></h3>
+        <hr>
+        <p id="p">마우스를 올리면 올리브 색으로 변경</p>
+    </body>
+</html>

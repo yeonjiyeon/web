@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>36_selector_04.html</title>
+<style>
+	h1 + h2 {  /*h1바로 뒤에 오는 h2 태그만 적용*/
+		color:blue;
+	}
+	h1~h2 {   /*h1뒤에 오는 h2 태그들 적용 <p>태그가 있을 시 적용X*/
+		text-decoration:underline;
+	}
+	
+	h1 + b { /*h1바로 뒤에 오는 b가 존재하지 않음, 중간에 h2가 존재*/
+		background:red;
+	}
+	
+	h1 ~ b {
+		color:pink;
+	}
+</style>
+</head>
+<body>
+	<h1>짜장면</h1>
+	<h2>우동</h2>
+	<b>탕수육</b> 
+	<a>전가복</a> 
+	<b>짬뽕</b>
+	<h2>라조기</h2>
+	<a>팔보채</a>
+</body>
+</html>

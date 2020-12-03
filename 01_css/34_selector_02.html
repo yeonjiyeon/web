@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>34_selector_02.html</title>
+	<style>
+	.bb {
+		width:100px;
+		height:100px;
+		border:1px solid black;
+		
+	}
+		#first #ff .bb {
+			color:red;
+		}
+		
+		#first #gg .bb {
+			color:pink;
+		}
+		
+		#second .bb {
+			color:blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="first">
+	  <div id="ff">
+		<span class="bb">hi</span>
+	  </div>
+	  <div id="gg">
+	  	<span class="bb">hoho</span>
+	  </div>
+	</div>
+	<div id="second">
+		<span class="bb">hahaha</span>
+	</div>
+</body>
+</html>

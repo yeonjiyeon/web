@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            function checkFilled(obj){
+                if(obj.value ==""){
+                    obj.value="enter name!!!";
+                    obj.focus();
+                }
+            }
+        </script>
+    </head>
+    <body onload="document.getElementById('name').focus()">
+        <h3>onfocus onblur</h3>
+        <hr>
+        <p>이름을 입력하지 않으면 다음 칸으로 이동 불가</p>
+        <form>
+            이름: <input type="text" id="name" onblur="checkFilled(this)"><br>
+            학번:<input type="text">
+        </form>
+    </body>
+</html>

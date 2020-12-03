@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>37_selector_05.html</title>
+<style>
+	a {
+		text-decoration:none;
+		color:balck;
+	}
+	a:visited { /*방만문한 사이트*/
+		color:red;
+	}
+	
+	a:link {/*링크가 되었느냐(href 속성)*/
+		background:yellow;
+	}
+	
+	a:active {/*링크된 부분을 클릭하고 있을 때*/
+		color:blue;
+	}
+	
+	a:hover {/*마우스가 a태그위에 올라올 때*/
+		text-decoration:underline;
+		color:pink;
+	}
+</style>
+</head>
+<body>
+	<a href="http://www.naver.com">naver</a> <p>
+	<a href="http://www.daum.net">daum</a> <p>
+	<a href="http://www.kbs.co.kr">kbs</a> <p>
+	<a>hahaha</a>
+</body>
+</html>

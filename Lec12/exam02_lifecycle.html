@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{ message }}        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        //자바스크립트를 사용할 때
+        // var message = "Hello javascript"; 
+        // var div = document.getElementById("app");
+        // div.innerHTML = message;
+        
+        new Vue({
+            el : "#app",
+            data: {
+                message: 'Hello vue.js!!'
+            },
+            beforeCreate: function(){console.log('beforeCreate')},
+            created: function(){console.log('created')},
+            mounted: function(){
+                console.log('mounted')
+                this.message = 'Hello vue';
+                },
+            updated: function(){console.log('updated')} 
+        });
+    </script>
+</body>
+</html>

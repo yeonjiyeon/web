@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <comp-child v-on:childs-events="parentMethd"></comp-child>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        Vue.component('comp-child',{
+            template: '<button @click="handleClick">이벤트 호출하기</button>',
+            methods:{ handleClick:function(){this.$emit('childs-events')}}
+        });
+
+        new Vue({
+            el:'#app',
+            methods:{parentMethd:function(){alert("이벤트를 받았습니다!!!")}}
+        });
+    </script>
+</body>
+</html>

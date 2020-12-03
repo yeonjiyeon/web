@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="n in countdown">{{n}}</li>
+            <li>launch missile</li>
+            <button>Click me</button>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var vm= new Vue({
+            el:'#app',
+            data: {countdown:[]},
+            methods:{ toast(){alert('Tosted')}},
+            updated: function(){console.log("update")}
+
+        });
+        var counter = 10;
+        setInterval(function(){
+            if(counter > 1){
+                vm.countdown.push(
+                    counter=counter-1
+                )
+            }
+        },1000);
+    </script>
+</body>
+</html>

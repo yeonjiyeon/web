@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document Object Model</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="c05.css">
+    </head>
+    <body>
+        <div id="page">
+            <h1 id="header">List King</h1>
+            <h2>Buy groceries</h2>
+            <ul>
+                <li id="one" class="hot"><em>fresh</em>figs</li>
+                <li id="two" class="hot">pine nuts</li>
+                <li id="three" class="hot">honey</li>
+                <li id="four">balsamic vineger</li>
+                
+            </ul>
+        </div>
+        <script>
+           /*var el = document.querySelector("li.hot");//selector 한개만(첫번째 것)
+           el.className = 'cool';
+           var els = document.querySelectorAll("li.hot"); //selectAll 모두
+           els[1].className = 'cool';*/
+           var els = document.querySelectorAll("li.hot");
+/*           if(els.length > 0){
+               for(var i = 0; i<els.length; i++){
+                   els[i].className = "cool";
+               }
+           }
+*/
+        els.forEach(element=> element.className = 'cool');//element 임의의 변수들
+        </script>
+    </body>
+</html>

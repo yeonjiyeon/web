@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">        
+        <child-comp v-on:show-log='printText'></child-comp>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        Vue.component('child-comp',{
+            template:"<button @click='showlog'>show</button>",
+            methods:{showlog:function(){this.$emit('show-log')}}
+        });
+
+        new Vue({
+            el:'#app',
+            data:{message:'부모로부터 메시지가 왔어요'},
+            methods : {printText:function(){
+                console.log(message);
+            }}
+        });
+    </script>
+</body>
+</html>

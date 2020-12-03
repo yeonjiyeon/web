@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .strong {color:red}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(item, index) in list" v-bind:key="item.id"
+            v-bind:class="{strong: item.hp>50}" >
+                <!-- ID.{{item['id']}} {{item['name']}} HP.{{item['name']}} -->
+                ID.{{item.id}} {{item.name}} HP.{{item.hp}}
+                <span v-if="item.hp > 50">강하다</span>
+            </li>
+            <!-- <li>ID.{{list[0]['id']}} NAME.{{list[0]['name']}} HP.{{list[0]['name']}}</li>
+            <li>ID.{{list[1]['id']}} NAME.{{list[1]['name']}} HP.{{list[1]['name']}}</li>
+            <li>ID.{{list[2]['id']}} NAME.{{list[2]['name']}} HP.{{list[2]['name']}}</li>
+            <li>ID.{{list[3]['id']}} NAME.{{list[3]['name']}} HP.{{list[3]['name']}}</li> -->
+        </ul>
+    </div>      
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        new Vue ({
+            el : "#app",
+            data : { list: [] },
+            created: function(){//라이프사이클 사용
+                axios.get('list.json').then(
+                    function(response){
+                        this.list = response.data
+                    }.bind(this)).catch(function(e){//error 찾기 위해 사용 try catch와 유사
+                        console.error(e)
+                    })
+            }
+        });
+    </script>
+</body>
+</html>

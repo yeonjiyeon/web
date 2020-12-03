@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head><title></title>
+<style>
+    .found {background-color: chartreuse;}
+</style>
+</head>
+<body>
+<form id="textsearch">
+    <textarea id="incoming" cols="150" rows="10">
+    </textarea>
+    <p>
+        search pattern: <input id="pattern" type="text">
+    </p>
+</form>
+<button id="searchSubmint">Search for pattern</button>
+<div id="searchResult"></div> 
+<script>
+    document.getElementById("searchSubmint").onclick = 
+    function() {
+    var pattern = document.getElementById("pattern").value;
+    //정규식 사용
+    var re = new RegExp(pattern,"g");//g 검색 패턴을 비교할 때 일치하는 모든 부분을 선택하도록 설정함.
+         // 입력시   \w+(ter)+\w+
+    var searchString = document.getElementById("incoming").value;
+    var matchArray;
+    var last = 0, firt = 0;
+    var resultString = "<pre>";
+    while( ( matchArray =re.exec(searchString)) != null){
+        last = matchArray.index;
+        resultString += searchString.substring(firt, last);
+        resultString += "<span class='found'>"+matchArray[0]+"</span>";
+        firt = re.lastIndex;
+    }
+     resultString += searchString.substring(firt, searchString.length);
+     resultString +="<pre>"
+    document.getElementById("searchResult").innerHTML = resultString;
+    
+    }
+</script>   
+</body>
+</html>

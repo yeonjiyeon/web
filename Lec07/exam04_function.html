@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        
+    </head>
+    <body>
+        <script>
+            function squareB(x){
+                return x * x;
+            }
+
+            const square1 = (x) => {return x*x}; //const 생략 가능 , const 데이터 값을 바꿀 수 없음 
+            const square2 = x => x*x;
+
+            document.write("<br>7의 제곱 :"+ squareB(7));
+            document.write("<br>8의 제곱 :"+ square1(8));
+            document.write("<br>9의 제곱 :"+ square2(9));
+            square2 = 1000;
+            document.write(squre2);//상수변수값 변경을 할 수 없다
+        </script>
+        
+    </body>
+</html>

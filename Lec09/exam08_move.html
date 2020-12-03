@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        
+    </head>
+    <body>
+        <h3>마우스 정보를 확인한다</h3>
+        <hr>
+        <img src="media/beach.png" onmouseover="where(event)"><br>
+        <div id="div"></div>
+        <script>
+            var mydiv = document.getElementById('div');
+            function where(e){
+                var text = "버튼" + e.button+"<br>"; 
+                text += "(screen x, y)" +e.screenX+","+e.screenY+"<br>";
+                text += "(client x, y)" +e.clientX+","+e.clientY+"<br>";
+                text += "(offset x, y)" +e.offsetX+","+e.offsetY+"<br>";
+                text += "(x,y)" +e.x+","+e.y+"<br>";
+                div.innerHTML = text;
+            }
+
+            document.oncontextmenu=function(){alert("오른쪽 클릭 금지"); return false;}
+        </script>
+    </body>
+</html>

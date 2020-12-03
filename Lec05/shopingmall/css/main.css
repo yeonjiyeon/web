@@ -1,0 +1,32 @@
+section#main {
+    width: 990px; margin: auto;
+}
+
+section#cart1{
+    width: 215px;
+    float: left;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+section#cart1 #cart_title {
+    padding: 12px;
+    background-color: #96c11f;
+    color: white;
+    text-align: center;
+}
+
+section#cart1 li {
+    color: #666666;
+    padding: 7px 0 7px 30px;
+    border-bottom: solid 1px #cccccc;
+}
+
+section#cart2 {float: left; margin-top: 15px;}
+section#cart3 {float: left; margin-top: 15px; width: 236px;}
+
+section#cart3 #latest_notice{
+    width: 239px;
+    height: 161px;
+    background-image: url("/img/last");
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>18_table_01.html</title>
+<style>
+	table {
+		caption-side:top;/*표 제목의 위치:top,bottom*/
+		table-layout:fixed; /*auto:td가 길어지면 cell이 커짐,fixed*/
+	  	border-spacing=20px;
+	}
+	td {
+		width:40px;
+		height:20px;
+		border:1px solid black;
+		font-size:12px;
+	     /* empty-cells:hide;비어있는 td의 외곽선숨기기:show,hide*/
+	 
+	}
+</style>
+</head>
+
+
+<body>
+	<table width="200" height="200"  cellspacing="20"> <!-- border="1" cellspacing="10"  -->
+	  <caption>표의 제목</caption>
+		<tr align=center>
+		<td>250</td>
+		<td>260</td>
+		</tr>
+		<tr align=center>
+		<td>270</td>
+		<td>280 </td>
+		</tr>
+		<tr align=center>
+		<td>290</td>
+		<td>300 </td>
+		</tr>
+	</table>
+</body>
+</html>

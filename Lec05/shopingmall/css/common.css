@@ -1,0 +1,76 @@
+* {margin: 0; padding: 0;}
+body {
+    font-family: "맑은 고딕","돋음";
+    font-size: 12px;
+    color: #444444;
+    background-color: #f2f0f0;
+}
+
+ul{list-style-type: none;}
+
+a:link, a:visited, a:hover,a:active {
+    text-decoration: none;
+    color: #444444;
+}
+
+.clear{clear: both;}
+
+header {height: 120px;}
+header #top {width: 990px; margin: 0 auto;}
+header #logo {float: left; margin:30px 0 0 0;}
+
+header #search {
+    float:left;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #96c11f;
+    margin: 40px 0 0 150px;
+}
+
+header #search #search_title {float: left; margin-top: 6px;}
+header #search #search_form {float: left; margin-top: 6px;}
+header #search #search_form input {
+    width: 80px; height: 16px; border: 0;
+    background-color: #f2f0f0;
+    border-bottom: solid 1px #cccccc;
+}
+
+header #search #search_button {
+    float: left; margin: 3px 0 0 3px;
+}
+
+header #top_menu {float: right; margin-top: 45px;}
+header #top_menu li {
+    display: inline; margin-left: 10px;
+}
+
+header #top_menu a:link, header #top_menu:visited,
+header #top menu a:hover, header #top_menu a:active {
+    font-size: 11px; color: #888888;
+}
+
+header #top_menu li.green a:link, header #top_menu li.green a:visited,
+header #top_menu li.green a:hover, header #ttop_menu li.green a:active {
+    font-size: 11px; color: #96c11f;
+}
+
+header #main_menu {
+    height: 30px; margin-top: 15px;
+    background-color: #4e4c4d;
+}
+
+header #main_menu ul {
+    width: 990px;
+    margin: auto;
+    padding-top: 12px;
+    text-align: center;
+}
+
+header #main_menu ul li {
+    display: inline; margin: 0 57px;
+}
+
+header #main_menu a:link, header #main_menu a:visited,
+header #main_menu a:hover, header #main_menu a:active{
+    color: #ffffff;
+}
